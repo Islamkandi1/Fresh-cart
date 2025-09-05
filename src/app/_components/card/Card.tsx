@@ -9,7 +9,7 @@ import { prodcut } from "@/types/product.type";
 const MyCard = ({ product } : { product : prodcut }) => {
   return (
     <section className="shadow-xl relative group overflow-hidden">
-      {product.priceAfterDiscount && (
+      {product.priceAfterDiscount !=0 && product.priceAfterDiscount && (
         <Image
           src={sale}
           alt="sale"
@@ -38,7 +38,7 @@ const MyCard = ({ product } : { product : prodcut }) => {
             <section >
               <section className=" gap-1">
                 <section className=" flex items-center gap-1 md:block xl:flex">
-                  {product.priceAfterDiscount && (
+                  {product.priceAfterDiscount !=0  && product.priceAfterDiscount && (
                     <p className="font-[600] text-green-600 items-center">
                       {product.priceAfterDiscount} EGP
                     </p>

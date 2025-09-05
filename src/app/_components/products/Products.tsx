@@ -43,7 +43,7 @@ if(loading){
     <>
           <main >
       <section className="w-full md-[85%] px-3 md:px-7 lg:px-10 my-5 py-7">
-        <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5  gap-4">
+        <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xxl:grid-cols-5  gap-4">
           {data?.data?.map((product) => (
             <MyCard product={product} key={product._id} />
           ))}

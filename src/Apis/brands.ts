@@ -3,7 +3,7 @@ export default async function BrandsApi() {
     const res = await fetch("https://ecommerce.routemisr.com/api/v1/brands?limit=20");
   
     return res.json();
-  }catch(error){
+  }catch {
     throw new Error("something went wrong")
   }
 }

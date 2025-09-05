@@ -17,23 +17,22 @@ const Filter = ({
   category: categoryData;
   brandsData: brandData;
 }) => {
-
   // left the search to url======================================================
   const router = useRouter();
   const searchParams = useSearchParams();
   const updateQuery = (key: string, value: string) => {
     const params = new URLSearchParams(searchParams.toString());
-      if (!value) {
-    params.delete(key); 
-  } else {
-    params.set(key, value); 
-  } 
+    if (!value) {
+      params.delete(key);
+    } else {
+      params.set(key, value);
+    }
     router.push(`/products?${params.toString()}`);
   };
   return (
-    <div>
-      <section className="flex items-center justify-center gap-7 ">
-        <DropdownMenu >
+    <>
+      <section className="flex items-center flex-wrap justify-center gap-7 ">
+        <DropdownMenu>
           <DropdownMenuTrigger className=" capitalize p-4 py-2 rounded-[10px] border-1 border-main flex items-center gap-4 cursor-pointer text-main">
             sort <IoIosArrowDown />
           </DropdownMenuTrigger>
@@ -82,7 +81,7 @@ const Filter = ({
             Brands <IoIosArrowDown />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="   px-2 py-1">
-                        <DropdownMenuItem
+            <DropdownMenuItem
               onClick={() => updateQuery("brand", "")}
               className="text-main hover:!text-main cursor-pointer capitalize text-[1rem]"
             >
@@ -99,9 +98,9 @@ const Filter = ({
             ))}
           </DropdownMenuContent>
         </DropdownMenu>
-        <DropdownMenu></DropdownMenu>
+
       </section>
-    </div>
+    </>
   );
 };
 

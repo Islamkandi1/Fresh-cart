@@ -3,7 +3,7 @@ export default async function CategorySliderDate() {
     const res = await fetch("https://ecommerce.routemisr.com/api/v1/categories");
   
     return res.json();
-  }catch(error){
+  }catch{
     throw new Error("something went wrong")
   }
 }

@@ -23,13 +23,13 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-[#F0F3F2] fixed top-0 left-0 right-0 z-20">
-        <section className=" w-full md-[85%] px-3 md:px-7 lg:px-10 flex flex-wrap items-center justify-between mx-auto p-4">
+        <section className=" w-full md-[85%] px-3 md:px-7 lg:px-10 flex flex-wrap md:flex-nowrap items-center justify-between mx-auto p-4">
           {/* logo */}
           <Link
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <Image src={logo} alt="fresh cart logo" />
+            <Image src={logo} alt="fresh  cart logo" className="w-[140px] sm:w-[150px]" />
           </Link>
           {/* right side */}
           <section className="flex md:order-2">
@@ -65,13 +65,13 @@ const Navbar = () => {
               </DropdownMenu> */}
               <Link
                 href="/login"
-                className="block text-[1rem] p-2 px-2   font-[400] bg-main hover:bg-green-500 transition-all duration-300 text-white  capitalize rounded-sm "
+                className="block text-[.8rem] p-2 sm:text-[1rem]   font-[400] bg-main hover:bg-green-500 transition-all duration-300 text-white  capitalize rounded-sm "
               >
                 login
               </Link>
               <Link
                 href="/register"
-                className="block p-2 px-2 text-[1rem]   font-[400] bg-main hover:bg-green-500 transition-all duration-300 text-white  capitalize rounded-sm "
+                className="block p-2  text-[.8rem] sm:text-[1rem]  font-[400] bg-main hover:bg-green-500 transition-all duration-300 text-white  capitalize rounded-sm "
               >
                 register
               </Link>
